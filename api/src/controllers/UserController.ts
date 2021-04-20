@@ -20,7 +20,7 @@ class UserController {
     try {
       await schema.validate(request.body, { abortEarly: false });
     } catch (error) {
-      throw new AppError("User Already Exists!");
+      throw new AppError(error);
       // return response.status(400).json({ error: error });
     }
 
